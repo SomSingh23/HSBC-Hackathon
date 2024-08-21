@@ -18,7 +18,7 @@ mongoose
   });
 app.use(
   cors({
-    origin: "*", // Allows all origins
+    origin: "https://hsbc-hackathon.vercel.app", // Allows all origins
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: "Content-Type,Authorization",
   })
