@@ -8,6 +8,8 @@ import GoogleOAuth from "./GoogleOAuth.jsx";
 import FraudDetection from "./FraudDetection.jsx";
 import CustomerSegmentation from "./CustomerSegmentation.jsx";
 import TotalSependInEachCat from "./TotalSependInEachCat.jsx";
+import MerchantSpending from "./MerchentSpending.jsx";
+import GenderBasedSpending from "./GenderSegmentation.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +34,16 @@ const router = createBrowserRouter([
   {
     path: "total_spending_in_each_category",
     element: <TotalSependInEachCat />,
+    loader: deferRoleChecking,
+  },
+  {
+    path: "/merchant/spending",
+    element: <MerchantSpending />,
+    loader: deferRoleChecking,
+  },
+  {
+    path: "/gender/segmentation",
+    element: <GenderBasedSpending />,
     loader: deferRoleChecking,
   },
   {
