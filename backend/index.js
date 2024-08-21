@@ -17,7 +17,7 @@ mongoose
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/api/auth", authRoute);
+app.use("/api/auth/", authRoute);
 app.get("/", (req, res) => {
   console.log("req");
   res.status(200).send("HSBC Hackathon Server up and Running :)");

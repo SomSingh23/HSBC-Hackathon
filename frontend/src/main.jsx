@@ -1,19 +1,19 @@
 import { createRoot } from "react-dom/client";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
+import deferRoleChecking from "./deferRoleChecking.js";
+import GoogleOAuth from "./GoogleOAuth.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    loader: deferRoleChecking,
   },
   {
-    path: "/about",
-    element: <h1>HSBC Hackathon on 21/08/2024</h1>,
-  },
-  {
-    path: "/check",
-    element: <h1>Check Complete</h1>,
+    path: "/login/google/auth",
+    element: <GoogleOAuth />,
   },
   {
     path: "*",
@@ -21,5 +21,7 @@ const router = createBrowserRouter([
   },
 ]);
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <GoogleOAuthProvider clientId="1046716752032-28rvh1r1374cvfk00uomnm1f2km1anag.apps.googleusercontent.com">
+    <RouterProvider router={router} />
+  </GoogleOAuthProvider>
 );
