@@ -16,7 +16,14 @@ mongoose
   .catch((err) => {
     console.log("Error in connecting to MongoDB Hyderabad Server");
   });
-app.use(cors());
+app.use(
+  cors({
+    origin: "*", // Allows all origins
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
+  })
+);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/auth/", authRoute);
