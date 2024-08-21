@@ -74,16 +74,16 @@ function App() {
                           padding: "10px 20px",
                           fontSize: "18px",
                           color: "white",
-                          backgroundColor: "#e74c3c",
+                          backgroundColor: "#3498db",
                           textDecoration: "none",
                           borderRadius: "5px",
                           transition: "background-color 0.3s ease",
                         }}
                         onMouseEnter={(e) =>
-                          (e.target.style.backgroundColor = "#c0392b")
+                          (e.target.style.backgroundColor = "#2980b9")
                         }
                         onMouseLeave={(e) =>
-                          (e.target.style.backgroundColor = "#e74c3c")
+                          (e.target.style.backgroundColor = "#3498db")
                         }
                       >
                         Customer Segmentation
@@ -97,16 +97,16 @@ function App() {
                           padding: "10px 20px",
                           fontSize: "18px",
                           color: "white",
-                          backgroundColor: "#e74c3c",
+                          backgroundColor: "#3498db",
                           textDecoration: "none",
                           borderRadius: "5px",
                           transition: "background-color 0.3s ease",
                         }}
                         onMouseEnter={(e) =>
-                          (e.target.style.backgroundColor = "#c0392b")
+                          (e.target.style.backgroundColor = "#2980b9")
                         }
                         onMouseLeave={(e) =>
-                          (e.target.style.backgroundColor = "#e74c3c")
+                          (e.target.style.backgroundColor = "#3498db")
                         }
                       >
                         Total spending
@@ -119,16 +119,16 @@ function App() {
                           padding: "10px 20px",
                           fontSize: "18px",
                           color: "white",
-                          backgroundColor: "#e74c3c",
+                          backgroundColor: "#3498db",
                           textDecoration: "none",
                           borderRadius: "5px",
                           transition: "background-color 0.3s ease",
                         }}
                         onMouseEnter={(e) =>
-                          (e.target.style.backgroundColor = "#c0392b")
+                          (e.target.style.backgroundColor = "#2980b9")
                         }
                         onMouseLeave={(e) =>
-                          (e.target.style.backgroundColor = "#e74c3c")
+                          (e.target.style.backgroundColor = "#3498db")
                         }
                         to="/merchant/spending"
                       >
