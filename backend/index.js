@@ -2,6 +2,7 @@ require("dotenv").config();
 // All routes are imported here
 let authRoute = require("./routes/auth");
 let logicRoute = require("./routes/logic");
+let addDataRoute = require("./routes/addData");
 // Imported Routes end here
 let express = require("express");
 let cors = require("cors");
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/auth/", authRoute);
 app.use("/api/logic/", logicRoute);
+app.use("/api/addData/", addDataRoute);
 app.get("/", (req, res) => {
   console.log("req");
   res.status(200).send("HSBC Hackathon Server up and Running :)");

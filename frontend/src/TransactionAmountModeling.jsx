@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import BACKEND_URL from "./services/api";
 import {
-  BarChart,
-  Bar,
+  LineChart,
+  Line,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -12,11 +12,10 @@ import {
   ResponsiveContainer,
   Label,
   LabelList,
-  Cell,
 } from "recharts";
 import { ThreeDots } from "react-loader-spinner";
 
-function GenderBasedSpending() {
+function SpendingVisualization() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -26,26 +25,21 @@ function GenderBasedSpending() {
     setError(null);
     try {
       const response = await axios.get(
-        `${BACKEND_URL}/api/logic/insights/spending/gender`
+        `${BACKEND_URL}/api/logic/insights/customers/cltv`
       );
+      console.log("Fetched Data:", response.data); // Debugging line
       setData(response.data);
     } catch (err) {
       setError("Error fetching data");
+      console.error("Error fetching data:", err); // Debugging line
     } finally {
       setLoading(false);
     }
   };
 
-  const colorMap = {
-    M: "#4fa94d",
-    U: "#8884d8",
-    F: "#ff7300",
-    E: "#82ca9d",
-  };
-
   return (
     <div className="chart-container">
-      <h2>Gender-Based Spending Analysis</h2>
+      <h2>Customer Spending Visualization</h2>
       <button onClick={fetchData} disabled={loading}>
         {loading ? "Loading..." : "Fetch Data"}
       </button>
@@ -63,7 +57,7 @@ function GenderBasedSpending() {
       {error && <p style={{ color: "red" }}>{error}</p>}
       {data.length > 0 && (
         <ResponsiveContainer width="100%" height={500}>
-          <BarChart
+          <LineChart
             data={data}
             margin={{
               top: 20,
@@ -71,17 +65,16 @@ function GenderBasedSpending() {
               left: 20,
               bottom: 60,
             }}
-            barSize={60} // Increase the size of the bars
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               dataKey="_id"
               tick={{ angle: 0, fontSize: 14 }}
               textAnchor="middle"
-              interval={0} // Show all tick marks, no skipping
+              interval={0}
             >
               <Label
-                value="Gender"
+                value="Customer ID"
                 offset={-10}
                 position="insideBottom"
                 style={{ fontSize: 16 }}
@@ -101,27 +94,39 @@ function GenderBasedSpending() {
               }
             />
             <Legend verticalAlign="top" />
-            <Bar dataKey="totalSpent">
-              {data.map((entry) => (
-                <Cell
-                  key={entry._id}
-                  fill={colorMap[entry._id] || "#1ccc"} // Default color if not in colorMap
-                />
-              ))}
+            <Line
+              type="monotone"
+              dataKey="totalSpent"
+              stroke="#8884d8"
+              dot={false}
+              name="Total Spent"
+            >
               <LabelList
                 dataKey="totalSpent"
                 position="top"
-                formatter={(value) =>
-                  `$${new Intl.NumberFormat("en").format(value)}`
-                }
+                formatter={(value) => new Intl.NumberFormat("en").format(value)}
                 style={{ fontSize: 12, fill: "#333" }}
               />
-            </Bar>
-          </BarChart>
+            </Line>
+            <Line
+              type="monotone"
+              dataKey="transactionCount"
+              stroke="#82ca9d"
+              dot={false}
+              name="Transaction Count"
+            >
+              <LabelList
+                dataKey="transactionCount"
+                position="top"
+                formatter={(value) => new Intl.NumberFormat("en").format(value)}
+                style={{ fontSize: 12, fill: "#333" }}
+              />
+            </Line>
+          </LineChart>
         </ResponsiveContainer>
       )}
     </div>
   );
 }
 
-export default GenderBasedSpending;
+export default SpendingVisualization;

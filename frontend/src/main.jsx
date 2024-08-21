@@ -10,6 +10,8 @@ import CustomerSegmentation from "./CustomerSegmentation.jsx";
 import TotalSependInEachCat from "./TotalSependInEachCat.jsx";
 import MerchantSpending from "./MerchentSpending.jsx";
 import GenderBasedSpending from "./GenderSegmentation.jsx";
+import PredictiveModeling from "./TransactionAmountModeling.jsx";
+import TransactionForm from "./AddTransaction.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +46,16 @@ const router = createBrowserRouter([
   {
     path: "/gender/segmentation",
     element: <GenderBasedSpending />,
+    loader: deferRoleChecking,
+  },
+  {
+    path: "/predictive/modeling",
+    element: <PredictiveModeling />,
+    loader: deferRoleChecking,
+  },
+  {
+    path: "/add/transaction",
+    element: <TransactionForm />,
     loader: deferRoleChecking,
   },
   {
