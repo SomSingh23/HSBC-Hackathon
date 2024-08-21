@@ -1,0 +1,344 @@
+.link {
+  text-decoration: none;
+  color: rgb(4, 48, 192);
+  font-size: 25px;
+}
+
+.sendMail {
+  margin: 0;
+  margin-top: 150px;
+  padding: 30px;
+  font-size: 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  box-sizing: border-box;
+  align-items: center;
+}
+.patient_image {
+  height: 300px;
+  padding: 40px;
+  border-radius: 55px;
+}
+.signHeading {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 600;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.mainLogin {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.151);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+}
+.login_with_google2 {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.patient {
+  margin-top: 100px;
+  transition: all 1s; /* Smooth tra nsition */
+  background-color: #ffffff; /* White background */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding around the content */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Styles for links inside doctor div */
+.patient .patient_function {
+  font-size: 20px;
+  display: block; /* Make links block-level for better spacing */
+  padding: 10px 20px; /* Padding inside the link */
+  margin-bottom: 10px; /* Spacing between links */
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Link color */
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 6px; /* Rounded corners */
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.patient .patient_function:hover {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #ded9d9; /* Darker background on hover */
+}
+
+/* Additional styles for individual links */
+.patient a:nth-child(odd) {
+  background-color: #f8f8f8; /* Alternate background color */
+}
+
+.patient a:last-child {
+  margin-bottom: 0; /* Remove bottom margin from the last link */
+}
+.doctorCard {
+  margin-bottom: 40px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.164);
+  border-radius: 12px;
+  padding: 20px;
+}
+.doctorCard:hover {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+.doctorCard p {
+  margin: 0;
+}
+.doctorCard img {
+  height: 140px;
+  width: 140px;
+  border-radius: 10px;
+}
+.doctorCard button {
+  background-color: #04aa6d; /* Green */
+
+  color: white;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+@media screen and (max-width: 865px) {
+  .signHeading {
+    font-size: 28px;
+
+    padding: 20px;
+  }
+  .mainLogin {
+    flex-direction: column;
+    width: 90%;
+    height: 500px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+  .patient_image {
+    height: 180px;
+    padding: 20px;
+    border-radius: 35px;
+  }
+  .sendMail {
+    margin-top: 250px;
+  }
+  .testcase2failed {
+    font-size: 18px;
+  }
+}
+
+.button-37 {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
+  }
+}
+.doctorList {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid black; */
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* DataUpload.css */
+
+/* Modal styles */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Button styles */
+.uploadImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.option-btn {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(220, 25, 25);
+  color: rgb(240, 238, 238);
+  padding: 10px 20px;
+  border: none;
+  height: 50px;
+  font-family: "Arial", sans-serif;
+  width: 120px;
+  letter-spacing: 1px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.option-btn:hover {
+  transition: 0.3s;
+  font-family: "Arial", sans-serif;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  border: 2px solid rgb(0, 0, 0);
+  background-color: #f3f2f2;
+  color: rgb(220, 25, 25);
+}
+.option-btn1 {
+  background-color: rgb(3, 3, 3);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+
+  font-weight: bold;
+}
+.option-btn1:hover {
+  transition: 1s;
+  background-color: white;
+  color: #000;
+  font-weight: bold;
+}
+
+.INP {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: rgb(93, 186, 164);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #5f9ea0;
+}
+
+/* Card container styles */
+.card-containerAdityaBugCoder {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  padding: 50px;
+  align-items: center;
+  box-sizing: border-box;
+  height: inherit;
+}
+
+/* Card styles */
+.cardAdityaBugCoder {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 3px 6px 0;
+  border-radius: 8px;
+
+  width: inherit;
+  height: inherit;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.testcase2failed {
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 6px 0;
+  /* border: 1px solid rgb(41, 39, 39); */
+  border-radius: 10px;
+  font-family: "Lato", sans-serif;
+}
+.uploaded-image {
+  width: 100%; /* Make images smaller */
+  height: auto;
+  max-width: 100%; /* Ensure images don't exceed container width */
+}

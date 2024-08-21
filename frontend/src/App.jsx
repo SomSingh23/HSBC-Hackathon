@@ -3,6 +3,8 @@ import { ThreeDots } from "react-loader-spinner";
 import { useLoaderData, Await } from "react-router-dom";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import "./App.css";
+import BACKEND_URL from "./services/api";
 // let handleClick = async () => {
 //   let data = await axios.get("http://localhost:3001");
 //   console.log(data);
@@ -31,7 +33,10 @@ function App() {
             if (role === "hsbc") {
               return (
                 <>
-                  <h1>IT's HSBC</h1>
+                  <h1>HSBC Admin Page</h1>
+                  <Link to="/fraud/detection">Fraud Detection</Link>
+                  <br></br>
+                  <Link to="/customer/segmentation">Customer Segmentation</Link>
                 </>
               );
             }

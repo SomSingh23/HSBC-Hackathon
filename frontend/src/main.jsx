@@ -5,6 +5,8 @@ import App from "./App.jsx";
 import "./index.css";
 import deferRoleChecking from "./deferRoleChecking.js";
 import GoogleOAuth from "./GoogleOAuth.jsx";
+import FraudDetection from "./FraudDetection.jsx";
+import CustomerSegmentation from "./CustomerSegmentation.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,6 +16,17 @@ const router = createBrowserRouter([
   {
     path: "/login/google/auth",
     element: <GoogleOAuth />,
+    loader: deferRoleChecking,
+  },
+  {
+    path: "/fraud/detection",
+    element: <FraudDetection />,
+    loader: deferRoleChecking,
+  },
+  {
+    path: "/customer/segmentation",
+    element: <CustomerSegmentation />,
+    loader: deferRoleChecking,
   },
   {
     path: "*",
