@@ -41,4 +41,15 @@ router.get("/insights/customers/high_value", async (req, res) => {
   }
 });
 
+router.get("/insights/spending/category", async (req, res) => {
+  try {
+    const spendingByCategory = await Transaction.aggregate([
+      { $group: { _id: "$category", totalSpent: { $sum: "$amount" } } },
+    ]);
+    res.json(spendingByCategory);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
 module.exports = router;

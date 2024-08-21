@@ -7,6 +7,7 @@ import deferRoleChecking from "./deferRoleChecking.js";
 import GoogleOAuth from "./GoogleOAuth.jsx";
 import FraudDetection from "./FraudDetection.jsx";
 import CustomerSegmentation from "./CustomerSegmentation.jsx";
+import TotalSependInEachCat from "./TotalSependInEachCat.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
   {
     path: "/customer/segmentation",
     element: <CustomerSegmentation />,
+    loader: deferRoleChecking,
+  },
+  {
+    path: "total_spending_in_each_category",
+    element: <TotalSependInEachCat />,
     loader: deferRoleChecking,
   },
   {

@@ -33,10 +33,86 @@ function App() {
             if (role === "hsbc") {
               return (
                 <>
-                  <h1>HSBC Admin Page</h1>
-                  <Link to="/fraud/detection">Fraud Detection</Link>
-                  <br></br>
-                  <Link to="/customer/segmentation">Customer Segmentation</Link>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      marginTop: "50px",
+                      fontFamily: "Arial, sans-serif",
+                    }}
+                  >
+                    <h1 style={{ fontSize: "36px", color: "#2c3e50" }}>
+                      HSBC Admin Page
+                    </h1>
+                    <div style={{ marginTop: "30px" }}>
+                      <Link
+                        to="/fraud/detection"
+                        style={{
+                          display: "inline-block",
+                          padding: "10px 20px",
+                          fontSize: "18px",
+                          color: "white",
+                          backgroundColor: "#3498db",
+                          textDecoration: "none",
+                          borderRadius: "5px",
+                          marginBottom: "15px",
+                          transition: "background-color 0.3s ease",
+                        }}
+                        onMouseEnter={(e) =>
+                          (e.target.style.backgroundColor = "#2980b9")
+                        }
+                        onMouseLeave={(e) =>
+                          (e.target.style.backgroundColor = "#3498db")
+                        }
+                      >
+                        Fraud Detection
+                      </Link>
+                      <br />
+                      <Link
+                        to="/customer/segmentation"
+                        style={{
+                          display: "inline-block",
+                          padding: "10px 20px",
+                          fontSize: "18px",
+                          color: "white",
+                          backgroundColor: "#e74c3c",
+                          textDecoration: "none",
+                          borderRadius: "5px",
+                          transition: "background-color 0.3s ease",
+                        }}
+                        onMouseEnter={(e) =>
+                          (e.target.style.backgroundColor = "#c0392b")
+                        }
+                        onMouseLeave={(e) =>
+                          (e.target.style.backgroundColor = "#e74c3c")
+                        }
+                      >
+                        Customer Segmentation
+                      </Link>
+                      <br />
+                      <br></br>
+                      <Link
+                        to="/total_spending_in_each_category"
+                        style={{
+                          display: "inline-block",
+                          padding: "10px 20px",
+                          fontSize: "18px",
+                          color: "white",
+                          backgroundColor: "#e74c3c",
+                          textDecoration: "none",
+                          borderRadius: "5px",
+                          transition: "background-color 0.3s ease",
+                        }}
+                        onMouseEnter={(e) =>
+                          (e.target.style.backgroundColor = "#c0392b")
+                        }
+                        onMouseLeave={(e) =>
+                          (e.target.style.backgroundColor = "#e74c3c")
+                        }
+                      >
+                        Total spending
+                      </Link>
+                    </div>
+                  </div>
                 </>
               );
             }
