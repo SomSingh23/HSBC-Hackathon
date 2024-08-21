@@ -136,7 +136,52 @@ function App() {
                       </Link>
                       <br />
                       <br></br>
-                      <Link to="/gender/segmentation">Gender Segmentation</Link>
+                      <Link
+                        style={{
+                          display: "inline-block",
+                          padding: "10px 20px",
+                          fontSize: "18px",
+                          color: "white",
+                          backgroundColor: "#3498db",
+                          textDecoration: "none",
+                          borderRadius: "5px",
+                          marginBottom: "15px",
+                          transition: "background-color 0.3s ease",
+                        }}
+                        onMouseEnter={(e) =>
+                          (e.target.style.backgroundColor = "#2980b9")
+                        }
+                        onMouseLeave={(e) =>
+                          (e.target.style.backgroundColor = "#3498db")
+                        }
+                        to="/gender/segmentation"
+                      >
+                        Gender Segmentation
+                      </Link>
+
+                      <br></br>
+                      <Link
+                        style={{
+                          display: "inline-block",
+                          padding: "10px 20px",
+                          fontSize: "18px",
+                          color: "white",
+                          backgroundColor: "#3498db",
+                          textDecoration: "none",
+                          borderRadius: "5px",
+                          marginBottom: "15px",
+                          transition: "background-color 0.3s ease",
+                        }}
+                        onMouseEnter={(e) =>
+                          (e.target.style.backgroundColor = "#2980b9")
+                        }
+                        onMouseLeave={(e) =>
+                          (e.target.style.backgroundColor = "#3498db")
+                        }
+                        to="/predictive/modeling"
+                      >
+                        Predictive Modeling
+                      </Link>
                     </div>
                   </div>
                 </>
