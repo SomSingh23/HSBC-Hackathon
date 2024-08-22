@@ -34,7 +34,7 @@ router.post("/generateToken", async (req, res) => {
 
   let checkPatient = await User.findOne({ email: data.email });
   if (checkPatient === null) {
-    console.log("new Patient user");
+    console.log("new user");
     let newUser = new User({
       role: "hsbc",
       email: data.email,
@@ -45,7 +45,7 @@ router.post("/generateToken", async (req, res) => {
     return res.status(200).json({ token });
   }
   if (checkPatient.role === "hsbc") {
-    console.log("old user Patient");
+    console.log("old user");
     return res.status(200).json({ token });
   }
   return res.status(200).json({

@@ -18,10 +18,9 @@ mongoose
   });
 app.use(
   cors({
-    origin: "https://hsbc-hackathon.vercel.app", // Allows all origins
+    origin: "*", // Allows all origins
   })
 );
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/auth/", authRoute);
