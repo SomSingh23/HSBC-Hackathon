@@ -1,6 +1,9 @@
  # HSBC Hackathon Backend
 This project is the backend implementation for the HSBC Hackathon, built using Node.js, Express.js, and MongoDB. The backend is responsible for handling API routes, managing user authentication, importing CSV data into MongoDB, and providing insights based on transaction data.
 
+## Note:
+95% of the project was built in under 8 hours, including both frontend and backend.
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Backend Overview](#backend-overview)
