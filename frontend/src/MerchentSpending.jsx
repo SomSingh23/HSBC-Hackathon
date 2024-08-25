@@ -53,7 +53,7 @@ function MerchantSpending() {
               visible={true}
               height="120"
               width="120"
-              color="#4fa94d"
+              color="#cc3300"
               ariaLabel="three-dots-loading"
               wrapperStyle={{}}
             />
@@ -123,7 +123,7 @@ function MerchantSpending() {
                           <Bar
                             yAxisId="left"
                             dataKey="totalSpent"
-                            fill="#4fa94d"
+                            fill="#cc3300"
                             name="Total Spent"
                           >
                             <LabelList

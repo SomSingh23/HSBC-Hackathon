@@ -51,7 +51,7 @@ function TotalSependInEachCat() {
               visible={true}
               height="120"
               width="120"
-              color="#4fa94d"
+              color="#cc3300"
               ariaLabel="three-dots-loading"
               wrapperStyle={{}}
             />
@@ -111,7 +111,7 @@ function TotalSependInEachCat() {
                             }
                           />
                           <Legend />
-                          <Bar dataKey="totalSpent" fill="#4fa94d">
+                          <Bar dataKey="totalSpent" fill="#cc3300">
                             <LabelList
                               dataKey="totalSpent"
                               position="top"

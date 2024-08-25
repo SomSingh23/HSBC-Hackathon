@@ -37,7 +37,7 @@ function GenderBasedSpending() {
   };
 
   const colorMap = {
-    M: "#4fa94d",
+    M: "#cc3300",
     U: "#8884d8",
     F: "#ff7300",
     E: "#82ca9d",
@@ -55,7 +55,7 @@ function GenderBasedSpending() {
             visible={true}
             height="120"
             width="120"
-            color="#4fa94d"
+            color="#cc3300"
             ariaLabel="three-dots-loading"
           />
         </div>
